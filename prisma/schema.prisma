@@ -24,3 +24,12 @@ model Book {
   createdBy String
   authors   Author[]
 }
+
+model AuthorToBook {
+  A Int
+  B Int
+  createdBy String
+
+  @@id([A, B])
+  @@map("_AuthorToBook")
+}
